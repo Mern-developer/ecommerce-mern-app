@@ -1,4 +1,11 @@
 import jwt from "jsonwebtoken";
+// import multer from "multer";
+// import mediaFile from "./Models/mediaModel.js";
+// //import path from "path";
+// import mongoose from "mongoose";
+
+
+
 
 export const generateToken = (user) => {
     return jwt.sign({

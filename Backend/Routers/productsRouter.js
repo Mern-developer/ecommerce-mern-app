@@ -3,11 +3,21 @@ import productModel from '../Models/parentsModel.js';
 
 const productsRouter= express.Router();
 
+
 productsRouter.get('/', async (req, res)=>{
  const products = await productModel.find();
  res.send( products );
 
 });
+productsRouter.post('/create', async (req, res)=>{
+            const createProduct = await productModel.create(req.body)
+        if(createProduct){
+            res.send("Product added successfuly!")
+        }else{
+            res.send("Product not adding due to ")
+
+        }
+    });
 productsRouter.get('/slug/:slug', async (req, res) => {
     const products =await productModel.findOne({slug: req.params.slug})
     if(products){
@@ -25,18 +35,9 @@ productsRouter.get('/:id', async (req, res) => {
     }
 });
 
-productsRouter.post('/create', async (req, res)=>{
-            const createProduct = await productModel.create(req.body)
-        if(createProduct){
-            res.send("Product added successfuly!")
-        }else{
-            res.send("Product not adding due to ")
-
-        }
-    });
 
 productsRouter.put('/edit/:id', async (req, res)=>{
-    const edit = await productModel.findByIdAndUpdate({id: req.params.id});
+    const edit = await productModel.findByIdAndUpdate(req.params._id);
     if(edit){
         edit.name = req.body.name || edit.name;
         edit.slug = req.body.slug || edit.slug;
@@ -54,7 +55,6 @@ productsRouter.put('/edit/:id', async (req, res)=>{
         edit.mtrs3 = req.body.mtrs3 || edit.mtrs3;
         edit.mtrs4 = req.body.mtrs4 || edit.mtrs4;
         edit.mtrs5 = req.body.mtrs5 || edit.mtrs5;
-    }
         const updateproduct = await edit.save();
         res.send({
             name: updateproduct.name, 
@@ -73,7 +73,10 @@ productsRouter.put('/edit/:id', async (req, res)=>{
         mtrs3: updateproduct.mtrs3,
         mtrs4:  updateproduct.mtrs4,
         mtrs5: updateproduct.mtrs5,
-        });
+    });
+}else{
+    res.status(404).send({message: 'product not found'})
+}
 
 })
 

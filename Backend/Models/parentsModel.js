@@ -6,7 +6,7 @@ const seedModel = new Schema({
  
     name: String,
     slug: String,
-    image: String,
+    image: {type: String},
     color: String,
     Fabric: String,
     brand: String,

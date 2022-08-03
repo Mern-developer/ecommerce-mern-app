@@ -73,7 +73,7 @@ if (userInfo === true){
                     <TextField  sx={{width: '100%', mb: 2}}  onChange={(e)=>setSlug(e.target.value)} 
                   placeholder='Enter slug'  name="slug" label="" type="text"   variant="standard" />
                     <TextField  sx={{width: '100%', mb: 2}}  onChange={(e)=>setImage(e.target.value)} 
-                    name="image" label="" placeholder='Enter image path' type="text"   variant="standard" />
+                    name="image" label="" placeholder='Enter image path' type="file"  />
                     <TextField  sx={{width: '100%', mb: 2}}  onChange={(e)=>setColor(e.target.value)} name="color" label="" placeholder='Product Color' type="text"   variant="standard" />
                     <TextField  sx={{width: '100%', mb: 2}}  onChange={(e)=>setFabric(e.target.value)} name="Fabric" label="" placeholder='product Fabric' type="text"   variant="standard" />
                     <TextField  sx={{width: '100%', mb: 2}}  onChange={(e)=>setBrand(e.target.value)} name="brand" label="" placeholder='Product Brand' type="text"   variant="standard" />
