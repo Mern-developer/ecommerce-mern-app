@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken";
 // import mediaFile from "./Models/mediaModel.js";
 // //import path from "path";
 // import mongoose from "mongoose";
+    // "build": "cd Backend && npm install && cd ../frontend && npm install && npm run build",
 
 
 

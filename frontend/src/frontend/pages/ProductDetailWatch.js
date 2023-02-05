@@ -1,6 +1,6 @@
 import { Box, Chip, Container, Divider, Grid, ImageListItem, Typography } from '@mui/material'
 import React, { useContext, useEffect, useReducer } from 'react'
-import { Link, useNavigate, useParams, } from 'react-router-dom';
+import {useNavigate, useParams, } from 'react-router-dom';
 import { styled } from "@mui/material/styles";
 import  Ratings  from '../components/Ratings.js';
 import axios from "axios";

@@ -7,7 +7,6 @@ import {
   Button,
   Drawer,
   IconButton,
-  InputBase,
   ListItemButton,
   ListItemIcon,
   Menu,
@@ -21,7 +20,6 @@ import {
   MenuOpen,
   Person,
   // SendTimeExtension,
-  Search,
   ShoppingCartOutlined,
   ArrowRightAltRounded,
 } from "@mui/icons-material";

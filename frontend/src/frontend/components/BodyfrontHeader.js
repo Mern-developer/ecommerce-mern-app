@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel } from "swiper";
 import { Box } from '@mui/system';
-import {Card, CardContent, Container, Grid, ImageListItem, Typography } from '@mui/material';
+import {Card, CardContent, Grid, ImageListItem, Typography } from '@mui/material';
 
  const BodyfrontHeader = () => {
     const draweritems ={

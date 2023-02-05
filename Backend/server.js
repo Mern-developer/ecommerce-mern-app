@@ -21,9 +21,9 @@ app.use('/api/products', productsRouter)
 app.use('/api/users', userRouter)
 app.use('/api/orders', orderRouter)
 app.use('/api/admin', productsRouter)
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, '/frontend/build')));
-app.get('*', (req, res)=> res.sendFile(path.join(__dirname, '/frontend/build/index.html')));
+// const __dirname = path.resolve();
+// app.use(express.static(path.join(__dirname, '/frontend/build')));
+// app.get('*', (req, res)=> res.sendFile(path.join(__dirname, '/frontend/build/index.html')));
 
 const port = 5000;
 

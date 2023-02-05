@@ -7,8 +7,8 @@ import {
   ImageListItem,
   Typography,
 } from "@mui/material";
-import React, { useState, useEffect, useReducer, useContext } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import React, { useEffect, useReducer, useContext } from "react";
+import {useNavigate, useParams } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import Ratings from "../components/Ratings";
 import axios from "axios";

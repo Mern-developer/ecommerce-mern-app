@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import BodyfrontHeader from './frontend/components/BodyfrontHeader';
 import  Footer  from './frontend/components/Footer';
@@ -25,7 +25,6 @@ import Thanks from './frontend/pages/Thanks';
 import  OrderHistory  from './frontend/pages/OrderHistory';
 import Uploadproduct from './frontend/pages/Uploadproduct';
 import UpdateProduct from './frontend/pages/UpdateProduct';
-import Editproduct from './frontend/pages/Editproduct ';
 
 function App() {
   return (
